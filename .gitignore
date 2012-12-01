@@ -6,10 +6,32 @@
 
 # Ignore bundler config
 /.bundle
+/.rvmrc
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/*.yml
 /tmp
+
+# Ignore IDEA settings
+/.idea
+
+# Ignore schema file
+/db/schema.rb
+/db/structure.sql
+config/database.yml
+
+*.swp
+
+# Ignore test report
+/coverage
+
+# Ignore cache
+/.sass-cache
+
+# Ignore uploads files
+/public/system/uploads
+/public/uploads
