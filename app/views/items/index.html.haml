@@ -1,0 +1,33 @@
+%div#items
+
+:javascript
+  $(function() {
+    // Blog is the app name
+    window.router = new Blog.Routers.PostsRouter({posts: #{@posts.to_json.html_safe}});
+    Backbone.history.start();
+  });
+
+
+-#%h1 Listing items
+
+-#%table
+  -#%tr
+    -#%th Name
+    -#%th Description
+    -#%th State
+    -#%th
+    -#%th
+    -#%th
+
+  -#- @items.each do |item|
+    -#%tr
+      -#%td= item.name
+      -#%td= item.description
+      -#%td= item.state
+      -#%td= link_to 'Show', item
+      -#%td= link_to 'Edit', edit_item_path(item)
+      -#%td= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
+
+-#%br
+
+-#= link_to 'New Item', new_item_path
