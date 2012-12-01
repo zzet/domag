@@ -23,10 +23,12 @@ gem 'gon'
 gem 'i18n-js'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'therubyracer', :platform => :ruby
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
+  gem 'haml_coffee_assets'
+  gem 'execjs'
 end
 
 # Use unicorn as the web server
