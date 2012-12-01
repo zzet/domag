@@ -6,12 +6,18 @@ class Domag.Views.Items.IndexView extends Backbone.View
   initialize: () ->
     @options.items.bind('reset', @addAll)
 
+    item = new Domag.Models.Item
+    @form = new Backbone.Form({ model: item })
+    @form.bind(
+    $('#contentContainer').append(@form.render().el)
+
+
   addAll: () =>
     @options.items.each(@addOne)
 
   addOne: (item) =>
     view = new Domag.Views.Items.ItemView({model : item})
-    @$("tbody").append(view.render().el)
+    @$("#itemList").append(view.render().el)
 
   render: =>
     $(@el).html(@template(items: @options.items.toJSON() ))

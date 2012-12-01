@@ -65,5 +65,10 @@ module Domag
       g.stylesheets false 
       g.javascripts false  
     end
+
+    if defined? ::HamlCoffeeAssets
+      #config.hamlcoffee.awesome = true
+    end
+
   end
 end

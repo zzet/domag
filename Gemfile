@@ -13,14 +13,15 @@ gem 'pg'
 gem 'usefull_scopes', :git => 'https://github.com/kaize/usefull_scopes.git'
 
 gem "rails-backbone"
-gem 'simple_form'
-gem 'configus'
+gem 'rails-backbone-forms'
 gem 'state_machine'
-gem 'russian'
 gem 'validates'
 gem 'capi'
-gem 'gon'
-gem 'i18n-js'
+#gem 'simple_form'
+#gem 'configus'
+#gem 'russian'
+#gem 'gon'
+#gem 'i18n-js'
 
 group :assets do
   gem 'sass-rails'
@@ -43,6 +44,7 @@ group :development do
   gem 'rvm-capistrano'
   gem 'capistrano-ext'
   gem 'capistrano_colors'
+  gem 'erb2haml'
 end
 
 group :test do
